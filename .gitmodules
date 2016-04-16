@@ -1,0 +1,3 @@
+[submodule "PickCoServer"]
+	path = PickCoServer
+	url = https://github.com/bote795/PickCoServer.git
