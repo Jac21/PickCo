@@ -1,10 +1,16 @@
 <ion-view title="Copic Sketch Color Chart" id="page5">
     <ion-content padding="true" class="has-header">
         <form class="list">
-            <label class="item item-input" name="Color Card Search">
-                <i class="icon ion-search placeholder-icon"></i>
-                <input ng-model = "searchCode.code" type="search" placeholder="Seach Color i.e. B00">
-            </label>
+            <div class = "row">
+                <label class="item item-input half-width" name="Color Card Search">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input ng-model = "searchCode.code" type="search" placeholder="Seach Color Code i.e. B00">
+                </label>
+                <label class="item item-input half-width" name="Color Card Search">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input ng-model = "searchCode.name" type="search" placeholder="Seach Color Name i.e. Horizon Green">
+                </label>
+            </div>
             <div class="button-bar"></div>
             <div class="button-bar">
                 <button id="copicSketchColorChart-button10" class="button button-positive  button-block">Owned</button>
