@@ -3,7 +3,7 @@
         <form class="list">
             <label class="item item-input" name="Color Card Search">
                 <i class="icon ion-search placeholder-icon"></i>
-                <input type="search" placeholder="Seach Color i.e. B00">
+                <input ng-model = "searchCode.code" type="search" placeholder="Seach Color i.e. B00">
             </label>
             <div class="button-bar"></div>
             <div class="button-bar">
@@ -11,25 +11,9 @@
                 <button id="copicSketchColorChart-button11" class="button button-positive  button-block">Not Owned</button>
             </div>
         </form>
-        <div class="list card">
-            <div class="item item-divider">B00</div>
-            <div class="item item-body"></div>
-        </div>
-        <div class="list card">
-            <div class="item item-divider">B01</div>
-            <div class="item item-body"></div>
-        </div>
-        <div class="list card">
-            <div class="item item-divider">B02</div>
-            <div class="item item-body"></div>
-        </div>
-        <div class="list card">
-            <div class="item item-divider">B03</div>
-            <div class="item item-body"></div>
-        </div>
-        <div class="list card">
-            <div class="item item-divider">B04</div>
-            <div class="item item-body"></div>
+        <div class="list card" ng-repeat = "color in colors | filter:searchCode">
+            <div class="item item-divider" ng-style = "style(color.bg)">{{color.code}}</div>
+            <div class="item item-body">{{color.name}}</div>
         </div>
     </ion-content>
 </ion-view>
