@@ -12,8 +12,8 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('copicSketchColorChartCtrl', function($scope) {
-
+.controller('copicSketchColorChartCtrl', function(ColorSrvCtrl,$scope) {
+ this.colors = ColorSrvCtrl.colors;
 })
    
 .controller('chooseMarkerTypeCtrl', function($scope) {
